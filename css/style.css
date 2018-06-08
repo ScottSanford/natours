@@ -271,12 +271,12 @@ body {
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
   .card__cta {
+    text-align: center;
+    width: 90%;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    width: 90%; }
+    transform: translate(-50%, -50%); }
   .card__price-box {
     color: #fff;
     margin-bottom: 8rem;
@@ -399,13 +399,13 @@ body {
     content: '';
     display: block;
     height: 1.3rem;
+    opacity: 0;
+    transition: opacity .2s;
+    width: 1.3rem;
     left: 50%;
     position: absolute;
-    opacity: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity .2s;
-    width: 1.3rem; }
+    transform: translate(-50%, -50%); }
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button:after {
   opacity: 1; }
@@ -541,6 +541,69 @@ body {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%); }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 7rem;
+  position: fixed;
+  right: 6rem;
+  top: 6rem;
+  width: 7rem;
+  z-index: 2000; }
+
+.navigation__background {
+  background-image: radial-gradient(#7ed56f, #28b485);
+  border-radius: 50%;
+  height: 6rem;
+  position: fixed;
+  right: 6.5rem;
+  top: 6.5rem;
+  transform: scale(50);
+  width: 6rem;
+  z-index: 1000; }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1500; }
+
+.navigation__list {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  color: #fff;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .4s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    display: inline-block;
+    margin-right: 1.5rem; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem); }
 
 .section-about {
   background-color: #f7f7f7;
