@@ -75,6 +75,7 @@
         width: 3rem;
 
         &::after {
+            @include absCenter;
             background-color: $color-primary;
             border-radius: 50%;
             content: '';
@@ -83,7 +84,6 @@
             opacity: 0;  
             transition: opacity .2s;
             width: 1.3rem;
-            @include absCenter;
         }
     }
 
