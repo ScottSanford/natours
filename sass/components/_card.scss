@@ -152,7 +152,7 @@
     &__cta {
         text-align: center;
         width: 90%;
-        @include center-horizontal-vertical;
+        @include absCenter;
     }
 
     &__price-box {
