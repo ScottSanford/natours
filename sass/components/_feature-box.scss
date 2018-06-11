@@ -7,6 +7,10 @@
     text-align: center;
     transition: transform .2s;
 
+    @include respond(tab-land) {
+        padding: 1.5rem;
+    }
+
     &:hover {
         transform: scale(1.03) translateY(-1.5rem); 
     }
@@ -19,5 +23,9 @@
         display: inline-block;
         font-size: 6rem;
         margin-bottom: .5rem;
+
+        @include respond(tab-port) {
+            margin: 0;
+        }
     }
 }
