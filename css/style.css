@@ -552,9 +552,21 @@ body {
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .4s .2s;
     width: 75%; }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+        display: block; } }
   .popup__left {
     display: table-cell;
     width: 33.3333333%; }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        display: block;
+        height: 30rem;
+        width: 100%; } }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        height: 20rem; } }
   .popup__right {
     display: table-cell;
     padding: 3rem 5rem;
@@ -563,6 +575,11 @@ body {
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        float: left;
+        width: 50%;
+        height: 100%; } }
   .popup__text {
     column-count: 2;
     -moz-column-count: 2;
