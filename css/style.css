@@ -1,3 +1,20 @@
+/*
+0 - 600px:       Phone
+600 - 900px:     Tablet portrait
+900 - 1200px:    Tablet landscape
+[1200 - 1800px] is where our normal styles apply
+1800px + :       Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,17 +52,29 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   color: #777;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.7;
-  padding: 3rem; }
+  line-height: 1.7; }
 
 .heading-primary {
   color: #fff;
@@ -58,6 +87,10 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     animation: moveInRight 1s ease-out;
     display: block;
@@ -76,6 +109,12 @@ body {
   letter-spacing: .2rem;
   text-transform: uppercase;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2); }
@@ -528,6 +567,9 @@ body {
   color: #f7f7f7;
   font-size: 1.4rem;
   padding: 10rem 0; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     margin-bottom: 8rem;
     text-align: center; }
@@ -538,6 +580,10 @@ body {
     border-top: 1px solid #eee;
     display: inline-block;
     padding-top: 2rem; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        text-align: center;
+        width: 100%; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -561,12 +607,24 @@ body {
     float: right;
     padding-top: 2rem;
     width: 80%; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        float: none;
+        text-align: center;
+        width: 100%; } }
 
 .row {
   margin: 0 auto;
   max-width: 114rem; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     clear: both;
     content: '';
@@ -575,6 +633,13 @@ body {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^='col-'] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -596,6 +661,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -624,6 +693,14 @@ body {
   top: 6rem;
   width: 7rem;
   z-index: 2000; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      right: 4rem;
+      top: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      right: 3rem;
+      top: 3rem; } }
 
 .navigation__background {
   background-image: radial-gradient(#7ed56f, #28b485);
@@ -635,6 +712,14 @@ body {
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   width: 6rem;
   z-index: 1000; }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      right: 4.5rem;
+      top: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      right: 3.5rem;
+      top: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;
