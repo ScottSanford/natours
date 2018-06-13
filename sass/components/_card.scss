@@ -172,7 +172,8 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em), // tab-port
+           only screen and (hover: none) { // whenever we have a device use touch
         background-color: $color-white;
         border-radius: $border-radius-small;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
