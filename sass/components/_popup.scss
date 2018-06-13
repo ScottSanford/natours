@@ -9,6 +9,12 @@
     visibility: hidden;
     width: 100%;
     z-index: 9999;
+
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        background-color: rgba($color-black, .3);
+        backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+    }
     
     &__content {
         @include absCenter;

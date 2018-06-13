@@ -8,6 +8,7 @@
     
     &__side {
         backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         border-radius: $border-radius-small;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         font-size: 2rem;
