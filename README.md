@@ -1,11 +1,9 @@
+<p align="center">
+  <img src="./img/ss1.png" width="500"/>
+</p>
+
 ## Natours
 An Advanced CSS project focusing on SASS fundamentals and Float Layout.
-
-## Project Screen Shots
-![](./img/ss1.png)
-![](./img/ss2.png)
-![](./img/ss3.png)
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
 
 ## Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
