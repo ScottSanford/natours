@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img/ss1.png" width="500"/>
+  <img src="./img/ss1.png" width="600"/>
 </p>
 
 ## Natours
